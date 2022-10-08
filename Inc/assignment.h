@@ -14,6 +14,14 @@
  * 		and make your "LED blink" application code readable and great again!
  */
 
+typedef enum EDGE_TYPE{
+	NONE = 0,
+	RISING = 1,
+	FALLING = 2
+}EDGE_TYPE;
+
+EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples);
+
 /* General purpose input output port A macros */
 //GPIOA peripheral base address
 #define	GPIOA_BASE_ADDR			(uint32_t)(0x48000000U) /* Add GPIO A peripheral base address here. */
